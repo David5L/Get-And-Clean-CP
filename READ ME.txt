@@ -1,0 +1,36 @@
+READ ME
+First, I want to take a look at the README document included in the Samsung data sets
+To obtain as much info as possible about the data sets, before tidying them up.
+There are 30 different subjects in the two groups ( training and testing) numbered 1 – 30.
+21 are in the training data set, and 9 are in the testing data set.
+There are 17 different signal variables of the feature vector for each pattern, and each signal variable has over a dozen variables describing a statistical parameter of the signal variable.  For this assignment,
+We are only interested in the mean and standard deviation variables of the signals.
+ReadME gives the following text files to be used from each set:
+features: Lists  names of all the features
+activity_labels: Links the class labels with the activity name
+train/x_train:  data values oftraining set
+train/ y_train: training labels
+test/x_test: data values of test set
+test/y_test: test labels
+subject_train :  Subject ID
+subject_test: Subject ID
+
+Now the next step is to merge the training and test sets for these training data, training labels, and subjects. This gives step 1 of the assignment.
+
+For step 2 of the assignment,  its necessary to look at the column names of the Features data table to
+See the structure of which variables contain the mean and std. deviation of each measurement. From
+Looking at the names function of my Feat.  Data table, I see that mean() and std() are contained in all the
+Columns I want, so I can subset the data set with those terms.
+
+For Step 3, I go back and read the activities test file, then replace the index #s in the activities column
+Of the df with their matching descriptions.
+
+For Step 4, I check the names of the df, and pick out which labels could be improved with descriptive
+Names.  prefix T, ACC, Gyro, prefix f, and mag should all be replaced with their full words. Also add
+Underlines in appropriate places to make labels more readable.
+
+For step 5, the df must be grouped by subject and activity, then summarized with the mean
+Of each variable. I LOVE dplyr!!!!!  Lol
+
+Finally save final data set to a text file using write data function.
+
